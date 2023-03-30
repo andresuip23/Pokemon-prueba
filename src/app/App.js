@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CardsList from "../components/CardsList";
 import Cards from "../components/Cards";
 import Header from "../components/Header";
+import PokeDay from "../components/PokeDay";
 import useFetchPokemons from "../hooks/useFetchPokemons";
 import "./App.css";
 import { Autoplay, Pagination } from "swiper";
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
     <Header/>
+    <PokeDay data={pokemonList}/>
     <div className="slider-wrapper">
       <Swiper
         modules={[Pagination, Autoplay]}
